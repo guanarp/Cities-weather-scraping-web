@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Un poco mas de formateo y scripts para usar los datos en la lista-->
+<style>
+    
+    .tab {position:absolute;left:150px; }
+
+    body{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: large;
+    }
+    ul{
+        text-align: center;
+    }
+    li{
+        list-style-type: none;
+        text-align: center;
+        display: inline;
+    }
+    div.imagen-fondo{
+        
+        background-image: url(https://storage.lacapitalmdp.com/2019/08/Clima-03-1024x639.jpg);
+        background-position-x: center;
+        background-repeat:no-repeat;
+        height: 100%;
+        width: 100%;
+    
+    }
+    ul.temp{
+        text-align:start ;
+    }
+</style>
+<script>
+    var datos = JSON.parse('{{ datos| tojson | safe}}'); /* La lista se parsea */
+</script>    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteorologia</title>
+</head>
+
+<h1 style="text-align:center;"><script>document.write(datos[0].Ciudad);</script></h1>
+<body style="background: border-box;background-color: lavender;">
+    
+    <div class=imagen-fondo>
+        <ul id=dias>
+
+            <div style="font-size:large;"> <!-- Aqui es donde en forma de lista inline se van cargando los datos, accediendo al json, 
+                se repite el proceso -->
+                <li>Dia de la semana:<script>document.write(datos[0].Dia);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Temperatura Maxima:<script>document.write(datos[0].Temp.Max);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Temperatura Minima:<script>document.write(datos[0].Temp.Min);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Velocidad del viento:<script>document.write(datos[0].Velocidad);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <br>
+                <br>
+            </div>
+            <div style="font-size:large;">
+                <li>Dia de la semana:<script>document.write(datos[1].Dia);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Temperatura Maxima:<script>document.write(datos[1].Temp.Max);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Temperatura Minima:<script>document.write(datos[1].Temp.Min);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Velocidad del viento:<script>document.write(datos[1].Velocidad);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <br>
+                <br>
+            </div>
+            <div style="font-size:large;">
+                <li>Dia de la semana:<script>document.write(datos[2].Dia);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Temperatura Maxima:<script>document.write(datos[2].Temp.Max);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Temperatura Minima:<script>document.write(datos[2].Temp.Min);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Velocidad del viento:<script>document.write(datos[2].Velocidad);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <br>
+                <br>
+            </div>
+            <div style="font-size:large;">
+                <li>Dia de la semana:<script>document.write(datos[3].Dia);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Temperatura Maxima:<script>document.write(datos[3].Temp.Max);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Temperatura Minima:<script>document.write(datos[3].Temp.Min);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Velocidad del viento:<script>document.write(datos[3].Velocidad);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <br>
+                <br>
+            </div>
+            <div style="font-size:large;">
+                <li>Dia de la semana:<script>document.write(datos[4].Dia);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Temperatura Maxima:<script>document.write(datos[4].Temp.Max);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Temperatura Minima:<script>document.write(datos[4].Temp.Min);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Velocidad del viento:<script>document.write(datos[4].Velocidad);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <br>
+                <br>
+            </div>
+            <div style="font-size:large;">
+                <li>Dia de la semana:<script>document.write(datos[5].Dia);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Temperatura Maxima:<script>document.write(datos[5].Temp.Max);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Temperatura Minima:<script>document.write(datos[5].Temp.Min);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Velocidad del viento:<script>document.write(datos[5].Velocidad);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <br>
+                <br>
+            </div>
+            <div style="font-size:large;">
+                <li>Dia de la semana:<script>document.write(datos[6].Dia);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Temperatura Maxima:<script>document.write(datos[6].Temp.Max);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Temperatura Minima:<script>document.write(datos[6].Temp.Min);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li>Velocidad del viento:<script>document.write(datos[6].Velocidad);</script>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <br>
+                <br>
+            </div>      
+        </ul>
+    </div>
+    
+
+    
+</body>
+</html>
